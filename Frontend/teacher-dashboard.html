@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Attendance System</title>
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="./css/teacher.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <div class="navbar">
+
+   <h2>
+      Attendance System
+   </h2>
+
+   <div class="nav-buttons">
+
+      <button
+         class="report-btn"
+         onclick="openReport()"
+      >
+         Attendance Report
+      </button>
+
+      <button class="logout-btn">
+
+         Logout
+
+      </button>
+
+   </div>
+
+</div>
+  <!-- Main Container -->
+
+  <div class="container">
+
+    <!-- Top Section -->
+
+    <div class="top-section">
+
+      <div class="input-group">
+
+        <label>Department</label>
+
+       <select id="department">
+          <option>CSE</option>
+          <option>ECE</option>
+          <option>EE</option>
+        </select>
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Semester</label>
+
+        <select id="semester">
+          <option>1st Sem</option>
+          <option>2nd Sem</option>
+          <option>3rd Sem</option>
+        </select>
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Subject</label>
+
+        <select id="subject">
+          <option>DBMS</option>
+          <option>OS</option>
+          <option>CN</option>
+        </select>
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Date</label>
+
+        <input
+           type="date"
+           id="attendanceDate"
+        >
+
+      </div>
+
+      <button  class="load-btn" id="loadStudentsBtn">
+        Load Students
+      </button>
+
+    </div>
+
+    <!-- Table Section -->
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Attendance</th>
+          </tr>
+
+        </thead>
+
+        <tbody id="studentTable">
+
+        </tbody>
+
+      </table>
+
+      <div class="submit-section">
+
+        <button class="submit-btn" id="submitAttendance">
+          Submit Attendance
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JavaScript Link -->
+  <script src="./js/teacher.js"></script>
+</body>
+</html>

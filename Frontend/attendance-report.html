@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+   >
+
+   <title>
+      Attendance Report
+   </title>
+
+   <link
+      rel="stylesheet"
+      href="./css/report.css"
+   >
+
+</head>
+
+<body>
+
+   <!-- Navbar -->
+
+   <div class="navbar">
+
+      <h2>
+         Attendance Report
+      </h2>
+
+      <button
+         class="logout-btn"
+         onclick="logout()"
+      >
+         Logout
+      </button>
+
+   </div>
+
+   <!-- Main Container -->
+
+   <div class="container">
+
+      <!-- Filter Section -->
+
+      <div class="filter-section">
+
+         <div class="input-group">
+
+            <label>
+               Department
+            </label>
+
+            <select id="department">
+
+               <option value="">
+                  All
+               </option>
+
+               <option>
+                  CSE
+               </option>
+
+               <option>
+                  ECE
+               </option>
+
+               <option>
+                  EE
+               </option>
+
+            </select>
+
+         </div>
+
+         <div class="input-group">
+
+            <label>
+               Semester
+            </label>
+
+            <select id="semester">
+
+               <option value="">
+                  All
+               </option>
+
+               <option>
+                  1st Sem
+               </option>
+
+               <option>
+                  2nd Sem
+               </option>
+
+               <option>
+                  3rd Sem
+               </option>
+
+            </select>
+
+         </div>
+
+         <div class="input-group">
+
+            <label>
+               Subject
+            </label>
+
+            <select id="subject">
+
+               <option value="">
+                  All
+               </option>
+
+               <option>
+                  DBMS
+               </option>
+
+               <option>
+                  OS
+               </option>
+
+               <option>
+                  CN
+               </option>
+
+            </select>
+
+         </div>
+
+         <div class="input-group">
+
+            <label>
+               Date
+            </label>
+
+            <input
+               type="date"
+               id="date"
+            >
+
+         </div>
+
+         <button
+            class="load-btn"
+            onclick="loadReport()"
+         >
+            Load Report
+         </button>
+
+      </div>
+
+      <!-- Search -->
+
+      <div class="search-section">
+
+         <input
+            type="text"
+            id="searchInput"
+            placeholder="Search By Roll Or Name"
+            onkeyup="searchStudent()"
+         >
+
+      </div>
+
+      <!-- Report Table -->
+
+      <div class="table-container">
+
+         <table id="reportTable">
+
+            <thead>
+
+               <tr>
+
+                  <th>
+                     Roll
+                  </th>
+
+                  <th>
+                     Name
+                  </th>
+
+                  <th>
+                     Department
+                  </th>
+
+                  <th>
+                     Semester
+                  </th>
+
+                  <th>
+                     Subject
+                  </th>
+
+                  <th>
+                     Status
+                  </th>
+
+                  <th>
+                     Date
+                  </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody id="reportBody">
+
+            </tbody>
+
+         </table>
+
+      </div>
+
+   </div>
+
+   <!-- JavaScript -->
+
+   <script src="./js/report.js"></script>
+
+</body>
+
+</html>

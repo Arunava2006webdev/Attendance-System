@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login Page</title>
+
+  <link rel="stylesheet" href="./css/login.css">
+
+</head>
+
+<body>
+
+  <div class="login-container">
+
+    <div class="login-card">
+
+      <h1>Attendance System</h1>
+
+      <p>Please Login</p>
+
+      <!-- Login Type -->
+
+      <div class="input-group">
+
+        <label>Login As</label>
+
+        <select id="loginType">
+
+          <option value="student">
+            Student
+          </option>
+
+          <option value="teacher">
+            Teacher
+          </option>
+
+        </select>
+
+      </div>
+
+      <!-- User ID -->
+
+      <div class="input-group">
+
+        <label>Email / Roll Number</label>
+
+        <input
+          type="text"
+          id="userId"
+          placeholder="Enter Email or Roll Number"
+        >
+
+      </div>
+
+      <!-- Password -->
+
+      <div class="input-group">
+
+        <label>Password</label>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+        >
+
+      </div>
+
+      <!-- Button -->
+
+      <button onclick="loginUser()">
+        Login
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="./js/login.js"></script>
+
+</body>
+</html>
