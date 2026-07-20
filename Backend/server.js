@@ -49,9 +49,15 @@ app.post("/login",(req,res)=>{
 
             if(error){
 
-               console.log(error);
+            console.log(error);
 
-            }
+            return res.status(500).json({
+
+            message:"Server Error"
+
+         });
+
+         }
 
             else if(result.length > 0){
 
@@ -103,9 +109,15 @@ app.post("/login",(req,res)=>{
 
             if(error){
 
-               console.log(error);
+            console.log(error);
 
-            }
+            return res.status(500).json({
+
+            message:"Server Error"
+
+            });
+
+         }
 
             else if(result.length > 0){
 
@@ -168,9 +180,15 @@ app.get("/students",
 
          if(error){
 
-            console.log(error);
+   console.log(error);
 
-         }
+   return res.status(500).json({
+
+      message:"Server Error"
+
+   });
+
+}
 
          else{
 
@@ -221,9 +239,15 @@ app.post("/attendance",(req,res)=>{
 
          if(checkError){
 
-            console.log(checkError);
+   console.log(checkError);
 
-         }
+   return res.status(500).json({
+
+      message:"Server Error"
+
+   });
+
+}
 
          // Attendance Already Exists
 
@@ -276,9 +300,15 @@ app.post("/attendance",(req,res)=>{
 
                   if(insertError){
 
-                     console.log(insertError);
+   console.log(insertError);
 
-                  }
+   return res.status(500).json({
+
+      message:"Server Error"
+
+   });
+
+}
 
                   else{
 
@@ -327,9 +357,15 @@ app.get("/student-attendance/:roll",
 
          if(error){
 
-            console.log(error);
+   console.log(error);
 
-         }
+   return res.status(500).json({
+
+      message:"Server Error"
+
+   });
+
+}
 
          else{
 
@@ -429,9 +465,15 @@ app.get("/report",(req,res)=>{
 
          if(error){
 
-            console.log(error);
+   console.log(error);
 
-         }
+   return res.status(500).json({
+
+      message:"Server Error"
+
+   });
+
+}
 
          else{
 
@@ -446,8 +488,10 @@ app.get("/report",(req,res)=>{
 });
 /* Server */
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
 
-   console.log("Server Started On Port 3000");
+app.listen(PORT, () => {
+
+   console.log(`Server Started On Port ${PORT}`);
 
 });
