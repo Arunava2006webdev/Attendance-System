@@ -34,7 +34,7 @@ async function loadAttendance(){
 
    const response = await fetch(
 
-      `http://localhost:3000/student-attendance/${student.roll}`
+      `https://attendance-system-backend-p74u.onrender.com/student-attendance/${student.roll}`
 
    );
 

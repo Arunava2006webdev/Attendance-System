@@ -12,7 +12,7 @@ async function loginUser(){
    /* Request */
 
    const response = await fetch(
-      "http://localhost:3000/login",
+      "https://attendance-system-backend-p74u.onrender.com/login",
       {
 
          method:"POST",

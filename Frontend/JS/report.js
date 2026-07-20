@@ -36,7 +36,7 @@ async function loadReport(){
 
    const response = await fetch(
 
-      `http://localhost:3000/report?department=${department}&semester=${semester}&subject=${subject}&date=${date}`
+      `https://attendance-system-backend-p74u.onrender.com/report?department=${department}&semester=${semester}&subject=${subject}&date=${date}`
 
    );
 

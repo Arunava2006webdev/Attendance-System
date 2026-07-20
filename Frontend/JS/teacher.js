@@ -32,7 +32,7 @@ async function loadStudents(){
 
    const response = await fetch(
 
-      `http://localhost:3000/students?department=${department}&semester=${semester}`
+      `https://attendance-system-backend-p74u.onrender.com/students?department=${department}&semester=${semester}`
 
    );
 
@@ -273,7 +273,7 @@ submitButton.addEventListener(
 
          await fetch(
 
-            "http://localhost:3000/attendance",
+            "https://attendance-system-backend-p74u.onrender.com/attendance",
 
             {
 
