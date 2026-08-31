@@ -287,3 +287,13 @@ async function loadAttendance(){
 // Call Function
 
 loadAttendance();
+// Logout
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+   logoutBtn.addEventListener("click", function () {
+      localStorage.removeItem("student");
+      window.location.href = "index.html";
+   });
+}

@@ -325,3 +325,12 @@ function openReport(){
       "attendance-report.html";
 
 }
+// Logout
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+   logoutBtn.addEventListener("click", function () {
+      window.location.href = "index.html";
+   });
+}
